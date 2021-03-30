@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+
+* {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Dosis', sans-serif;
     outline: none;
     border: none;
 }
@@ -18,7 +19,14 @@ html {
 
     font-size: 62.5%;
     overflow-x: hidden;
-    
+
+}
+
+section {
+
+    min-height: 100vh;
+    padding: 0 7%;
+    padding-top: 9rem;
 }
 
 a {
@@ -36,12 +44,20 @@ ul {
     list-style-type: none;
 }
 
-body{
+img {
+
+    max-width: 100%;
+    display: block;
+}
+
+body {
 
     line-height: 1.4;
+    overflow: hidden;
 }
 
 /********* End General Style ************/
+
 
 .header {
     width: 100%;
@@ -54,19 +70,23 @@ body{
     left: 0;
     z-index: 0;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    background-color: #fff;
+
 }
 
 .header .logo {
 
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: #2c3e50;
+    font-weight: bold;
 }
 
 .header .navbar a {
 
     color: #2c3e50;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     margin-left: 2rem;
+    font-weight: bold;
 }
 
 .header .navbar a:hover {
@@ -91,11 +111,13 @@ body{
 
         display: block;
     }
+
     .header {
 
         padding: 2rem 3%;
     }
-    .navbar {
+
+    .header .navbar {
 
         position: absolute;
         top: 100%;
@@ -104,13 +126,117 @@ body{
         background-color: #f9f9f9;
         text-align: center;
         padding: 2rem 0;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
     }
 
-    .navbar a {
+    .header .navbar.nav-toggle {
+
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    .header .navbar a {
 
         display: block;
         padding: 1rem 0;
         margin: 1rem 0;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+
     }
+
+    section {
+
+        padding: 0 3%;
+        padding-top: 9rem;
+    }
+
+    .home .content {
+
+        text-align: center;
+        width: auto;
+    }
+}
+
+/*********** End Media Queries ****************/
+
+/********** Style Home Section **************/
+
+.home {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../imgs/banner2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.home .content {
+
+    width: 75rem;
+}
+
+.home .content h1 {
+
+    font-size: 4.5rem;
+    color: #dcdde1;
+    font-weight: 400;
+}
+
+.home .content p {
+    color: #aaa;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+.home .content .btn {
+
+    display: inline-block;
+    padding: .9rem 4rem;
+    font-size: 1.9rem;
+    color: #dcdde1;
+    background: #3498db;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/********* End Home Section *************/
+
+/**** Start Product Section **************/
+
+.product {}
+
+.product .heading {
+
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+.product .container-product {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product .container-product .box {
+
+    border: .1rem solid rgba(0, 0, 0, .1);
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #fff;
+    width: 38rem;
 }
